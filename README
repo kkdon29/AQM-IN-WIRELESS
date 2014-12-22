@@ -1,0 +1,20 @@
+There are 4 folder in this directory. 
+To run this, you need to have kernel-devel package installed
+Kernel version this has been tested on is 3.17.3-200 over fedora 20
+1. Common: This folder contains prerequisite header for all others.Enter the folder and run make
+2.  avq: This folder contains avq algorithm. Just run make to build it. To insert module run:
+insmod sch_avq.ko in superuser mode
+3. fred: This folder contains fred algorithm. Just run make to build it. To insert the module run:
+insmod sch_fred.ko in superusermode
+4: iproute2: This contains modified source code for iproute2 package. To build it enter iproute2/iproute2-3.17.0/ and run make. This will also build tc utility. To install run:
+make install in superuser mode
+files added in iproute2:
+q_fred.c
+q_avq.c
+tc_fred.c
+Files modified:
+include/linux/pkt_sched.h
+Makefile
+
+
+
